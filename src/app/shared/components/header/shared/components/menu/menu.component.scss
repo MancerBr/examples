@@ -1,0 +1,15 @@
+.header-menu {
+  display: flex;
+  list-style: none;
+  &__item {
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .5s;
+    &:hover {
+      color: rgba(0, 0, 0, 0.67);
+    }
+    &--active {
+      font-weight: bold;
+    }
+  }
+}

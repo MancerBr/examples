@@ -1,0 +1,9 @@
+<ul class="header-menu">
+  <li
+    *ngFor="let item of menu"
+    (click)="goToPage(item.route)"
+    [ngClass]="{'header-menu__item--active': currentUrl === ('/' + item.route)}"
+    class="header-menu__item">
+    {{item.title}}
+  </li>
+</ul>
