@@ -1,1 +1,14 @@
-<p>statistic works!</p>
+<button
+  mat-button
+  color="primary"
+  (click)="loadData()">
+  load data and dispatch 2 actions
+</button>
+<div class="content">
+  <ul class="data-block">
+    <li *ngFor="let first of firstData">{{first}}</li>
+  </ul>
+  <ul class="data-block">
+    <li *ngFor="let second of secondData">{{second}}</li>
+  </ul>
+</div>

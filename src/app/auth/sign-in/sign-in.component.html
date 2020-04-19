@@ -1,1 +1,15 @@
-<p>sign-in works!</p>
+<div class="container">
+  <form class="auth-form" [formGroup]="myForm" (ngSubmit)="login()">
+    <mat-form-field class="auth-form__full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="userEmail" placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="userEmail.hasError('email') && !userEmail.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="userEmail.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <button mat-button color="primary" [disabled]="!myForm.valid">Login</button>
+  </form>
+</div>
